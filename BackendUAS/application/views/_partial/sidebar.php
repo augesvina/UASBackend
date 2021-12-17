@@ -4,8 +4,8 @@
     <div class="transaksi">
         <h3>Transaksi</h3>
         <hr>
-        <a href="#" class="nav-link text-white">Top Up</a>
-        <a href="#" class="nav-link text-white">Pengeluaran</a>
+        <a href="<?php echo site_url('Transaksi_c/topup');?>" class="nav-link text-white">Top Up</a>
+        <a href="<?php echo site_url('Transaksi_c/cashout');?>" class="nav-link text-white">Pengeluaran</a>
         <a href="#" class="nav-link text-white">Remainder</a>
 
     </div>

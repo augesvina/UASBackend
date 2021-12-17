@@ -26,110 +26,11 @@
     <?php $this->load->view('_partial/sidebar'); ?>
         
         <span class="main-content m-3 p-2  rounded-3" id="main-content">
-            <!-- Tempat Status -->
-            <div class="d-flex flex-row justify-content-around" style="width: 180vh;">
-                <div class="text-start text-white bg-primary m-1 p-2" style="width:fit-content;height:fit-content;">
-                    <h2>Balance</h2>
-                    <hr>
-                    <h3 class="fw-bold">Rp 200.000</h3>
-                </div>
-                <div class="text-start text-white bg-warning m-1 p-2" style="width: fit-content;height: fit-content;">
-                    <h2>Akun Aktif</h2>
-                    <hr>
-                    <h3 class="fw-bold">172 Hari</h3>
-
-
-                </div>
-            </div>
-            <div class="graph">
-                <div id="pemasukkan" style="max-width:700px; height:400px"></div>
-                <div id="pengeluaran" style="max-width: 700px; height: 400px;"></div>
-
-            </div>
+           
 
         </span>
     </div>
 
-
-
-    <script src="https://www.gstatic.com/charts/loader.js">
-    </script>
-    <script>
-        google.charts.load('current', {
-            packages: ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            // Set Data
-            var data = google.visualization.arrayToDataTable([
-                ['Price', 'Size'],
-                [50, 10],
-                [60, 8],
-                [70, 8],
-                [80, 9],
-                [90, 9],
-                [100, 9],
-                [110, 10],
-                [120, 11],
-                [130, 14],
-                [140, 14],
-                [150, 15],
-            ]);
-            // Set Options
-            var options = {
-                title: 'Pemasukkan',
-                hAxis: {
-                    title: 'Tanggal'
-                },
-                vAxis: {
-                    title: 'Pemasukan'
-                },
-                legend: 'none'
-            };
-            // Draw
-            var chart = new google.visualization.LineChart(document.getElementById('pemasukkan'));
-            chart.draw(data, options);
-        }
-    </script>
-    <script>
-        google.charts.load('current', {
-            packages: ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            // Set Data
-            var data = google.visualization.arrayToDataTable([
-                ['Price', 'Size'],
-                [50, 10],
-                [60, 8],
-                [70, 8],
-                [80, 9],
-                [90, 9],
-                [100, 9],
-                [110, 10],
-                [120, 11],
-                [130, 14],
-                [140, 14],
-                [150, 15],
-            ]);
-            // Set Options
-            var options = {
-                title: 'Pemasukkan',
-                hAxis: {
-                    title: 'Tanggal'
-                },
-                vAxis: {
-                    title: 'Pemasukan'
-                },
-                legend: 'none'
-            };
-            // Draw
-            var chart = new google.visualization.LineChart(document.getElementById('pengeluaran'));
-            chart.draw(data, options);
-        }
-    </script>
 
 </body>
 

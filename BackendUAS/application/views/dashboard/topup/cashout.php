@@ -18,118 +18,70 @@
 
     <nav class="bg-warning p-3">
         <?php $this->load->view('_partial/navbar'); ?>
-        
+
 
     </nav>
 
     <div class="content d-flex flex-row">
-    <?php $this->load->view('_partial/sidebar'); ?>
-        
+        <?php $this->load->view('_partial/sidebar'); ?>
+
         <span class="main-content m-3 p-2  rounded-3" id="main-content">
             <!-- Tempat Status -->
-            <div class="d-flex flex-row justify-content-around" style="width: 180vh;">
-                <div class="text-start text-white bg-primary m-1 p-2" style="width:fit-content;height:fit-content;">
-                    <h2>Balance</h2>
-                    <hr>
-                    <h3 class="fw-bold">Rp 200.000</h3>
+            <h1>Cashout</h1>
+            <h4 class="text-muted">Please Choose cashout method</h4>
+            <form action="">
+                <div class="d-flex flex-row justify-content-around" style="width: 180vh;">
+
+                    <div class="d-flex flex-column">
+                        <div class="container bg-primary">
+                            <h1>Bank Transfer</h1>
+                            <h3>Minimum cashout Rp 10.000</h3>
+                        </div>
+                        <div class="agent">
+                            <h1>Agent</h1>
+                            <div class="d-flex flex-row">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="LAWSON" id="LAWSON" name="jenis">
+                                    <label class="form-check-label" for="LAWSON">
+                                        LAWSON
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="Pegadaian" id="Pegadaian" name="jenis">
+                                    <label class="form-check-label" for="Pegadaian">
+                                        Pegadaian
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="Pegadaian" id="Pegadaian" name="jenis">
+                                    <label class="form-check-label" for="Pegadaian">
+                                        KANTOR POS
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form1">
+                        <div class="mb-3">
+                            <label for="Nominal" class="form-label">Nominal</label>
+                            <input type="text" class="form-control" id="Nominal" name="nominal" placeholder="Masukkan Nominal">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Keterangan" class="form-label">Keterangan</label>
+                            <textarea class="form-control" id="Keterangan" name="Keterangan" rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-primary" name="submit" type="submit">Submit</button>
+                    </div>
                 </div>
-                <div class="text-start text-white bg-warning m-1 p-2" style="width: fit-content;height: fit-content;">
-                    <h2>Akun Aktif</h2>
-                    <hr>
-                    <h3 class="fw-bold">172 Hari</h3>
+            </form>
 
-
-                </div>
-            </div>
-            <div class="graph">
-                <div id="pemasukkan" style="max-width:700px; height:400px"></div>
-                <div id="pengeluaran" style="max-width: 700px; height: 400px;"></div>
-
-            </div>
 
         </span>
     </div>
 
-
-
-    <script src="https://www.gstatic.com/charts/loader.js">
-    </script>
-    <script>
-        google.charts.load('current', {
-            packages: ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            // Set Data
-            var data = google.visualization.arrayToDataTable([
-                ['Price', 'Size'],
-                [50, 10],
-                [60, 8],
-                [70, 8],
-                [80, 9],
-                [90, 9],
-                [100, 9],
-                [110, 10],
-                [120, 11],
-                [130, 14],
-                [140, 14],
-                [150, 15],
-            ]);
-            // Set Options
-            var options = {
-                title: 'Pemasukkan',
-                hAxis: {
-                    title: 'Tanggal'
-                },
-                vAxis: {
-                    title: 'Pemasukan'
-                },
-                legend: 'none'
-            };
-            // Draw
-            var chart = new google.visualization.LineChart(document.getElementById('pemasukkan'));
-            chart.draw(data, options);
-        }
-    </script>
-    <script>
-        google.charts.load('current', {
-            packages: ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            // Set Data
-            var data = google.visualization.arrayToDataTable([
-                ['Price', 'Size'],
-                [50, 10],
-                [60, 8],
-                [70, 8],
-                [80, 9],
-                [90, 9],
-                [100, 9],
-                [110, 10],
-                [120, 11],
-                [130, 14],
-                [140, 14],
-                [150, 15],
-            ]);
-            // Set Options
-            var options = {
-                title: 'Pemasukkan',
-                hAxis: {
-                    title: 'Tanggal'
-                },
-                vAxis: {
-                    title: 'Pemasukan'
-                },
-                legend: 'none'
-            };
-            // Draw
-            var chart = new google.visualization.LineChart(document.getElementById('pengeluaran'));
-            chart.draw(data, options);
-        }
-    </script>
 
 </body>
 
