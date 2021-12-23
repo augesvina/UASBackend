@@ -9,6 +9,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <title>Tambah Pengingat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="<?php echo base_url('assets/'); ?>ckeditor/ckeditor.js"></script>
+
 </head>
 
 <body>
@@ -19,28 +20,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-        <h1 class="text-center">Tambah Pengingat</h1>
+        <h1 class="text-center">Update Pengingat</h1>
 
-        <form action="<?php echo site_url('Informasi_c/add'); ?>" method="POST" enctype="multipart/form-data">
+        <form action="<?php echo site_url('Remainder_c/update'); ?>" method="POST" enctype="multipart/form-data">
+            
+                
+
+                <input type="hidden" name="id_remainder" value="<?php echo $remainder['id_remainder'];?>">
+                <div class="mb-3">
+                    <input type="text" name="judul" id="judul" class="form-control" placeholder="masukkan judul" value="<?php echo $remainder['judul'];?>">
+                </div>
+                <div class="mb-3">
+                    <textarea name="keterangan" id="keterangan" rows="10" cols="80" class="form-control">
+                    <?php echo $remainder['keterangan'];?>
+                    </textarea>
+                </div>
+
+                <div class="mb-3">
+                    <input type="datetime-local" name="batas_waktu" id="batas_waktu" class="form-control" value="<?php echo $remainder['batas_waktu'];?>">
+
+                </div>
 
 
+                <div class="mb-3 mx-auto"><button class="btn btn-outline-secondary col-6 " type="submit" id="button-addon1">Submit</button></div>
 
-            <div class="mb-3">
-                <input type="text" name="judul" id="judul" placeholder="Lokasi" class="form-control">
-            </div>
-            <div class="mb-3">
-                <textarea name="Keterangan" id="detail" rows="10" cols="80" class="form-control"></textarea>
-            </div>
-           
-            <div class="mb-3">
-                <input type="date" name="Deadline" id="tanggal" class="form-control">
-
-            </div>
-
-
-            <div class="mb-3 mx-auto"><button class="btn btn-outline-secondary col-6 " type="submit" id="button-addon1">Submit</button></div>
-
-
+        
         </form>
 
     </div>
