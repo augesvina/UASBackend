@@ -16,26 +16,26 @@
 
         <thead>
             <tr>
-                <th>Lokasi</th>
-                <th>Keterangan</th>
+                <th>keterangan</th>
                 <th>Status</th>
-                <th>Deadline</th>
+                <th>Tanggal Batas</th>
                 <th>Aksi</th>
             </tr>
         </thead>
 
         <tbody>
+        <?php foreach ($remainder as $remainders) : ?>
             <tr>
-                <td>Mejayan</td>
-                <td>Melihat BUku</td>
+                <td><?php echo $remainders['keterangan']; ?></td>
                 <td>Done</td>
-                <td>12 Desember 2021</td>
+                <td><?php echo $remainders['batas_waktu']; ?></td>
                 <td><ul>
-                    <li><a href="<?php echo site_url('Remainder_c/update');?>">Update</a></li>
-                    <li><a href="<?php echo site_url('Remainder_c/delete');?>">Delete</a></li>
+                    <li><a href="<?php echo site_url('Remainder_c/update/').$remainders['id_remainder'];?>">Update</a></li>
+                    <li><a href="<?php echo site_url('Remainder_c/del/').$remainders['id_remainder'];?>">Delete</a></li>
                 </ul></td>
 
             </tr>
+            <?php endforeach; ?>
 
 
 

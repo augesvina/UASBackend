@@ -34,7 +34,7 @@
 
                     <input type="text" name="penggarang_buku" id="penggarang_buku" placeholder="Penggarang buku">
 
-                    <input type="text" name="harga_buku" id="harga_buku" placeholder="Harga Buku">
+                    <input type="number" name="harga_buku" id="harga_buku" placeholder="Harga Buku">
 
                     <input type="file" name="foto_sampul" id="foto_sampul" value="default.jpg" >
                    

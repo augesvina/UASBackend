@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Dompet Anda </h1>
-    <h2><b>Rp 200.000</b></h2>
+    <h2><b><?php echo matauang($uang["balance"]);?></b></h2>
 
 
     <h3>Transaksi penggunaan dompet </h3>
@@ -21,18 +21,20 @@
                 <th>Dompet</th>
                 <th>Tanggal</th>
                 <th>Keterangan</th>
-                <th>Aksi</th>
+            
             </tr>
         </thead>
 
         <tbody>
+        <?php foreach ($list as $lists) : ?>
             <tr>
-                <td>Rp 200.000</td>
-                <td>12 Agustus 2022</td>
-                <td>Berkurang sebesar Rp 20.000 dari sebelumnya</td>
-                <td><a href="<?php echo site_url('Balance_c/delete');?>">Delete</a></li></td>
+                <td><?php echo matauang($lists["balance"]);?></td>
+                <td><?php echo $lists['Tanggal_balance']; ?></td>
+                <td><?php echo $lists['Keterangan'];?></td>
+               
 
             </tr>
+            <?php endforeach; ?>
 
 
 
