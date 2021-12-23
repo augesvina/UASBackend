@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 25, 2021 at 11:21 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Host: 127.0.0.1
+-- Generation Time: Dec 23, 2021 at 03:17 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -70,6 +70,26 @@ INSERT INTO `produkbuku` (`id_buku`, `judul_buku`, `penggarang_buku`, `harga_buk
 (1, 'Sebuah Seni untuk Bersikap Bodo Amat', 'Mark Manson', '128000', 'sebuah-seni-untuk-bersikap-bodoh-amat-mojok-store.jpg', '12 Desember 2021'),
 (8, 'Koala Kumal', 'Raditya Dika', '90000', '9789797807696_kuala_kumal__w600_hauto.jpg', '21 January 2021'),
 (42, 'kucinggarong', 'meongzy', '20000', 'Screenshot_2021-11-21_09-25-10.png', '20 12 2001');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id_user` int(10) DEFAULT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `name`, `email`, `password`) VALUES
+(NULL, 'uwa', 'uwaw@gm.com', '$2y$10$//1r.sFHXaphbH9PjgHWceEy8ILmmQxDS53.I5V4yS73lO5afCyh6');
 
 --
 -- Indexes for dumped tables
