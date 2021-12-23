@@ -86,7 +86,9 @@
         <tbody>
             <tr>
                 <td style="text-align: center; font-size: 64px;"><strong> Total</strong></td>
-                <td colspan="4" style="text-align: center; font-size: 64px;"><?php echo matauang($this->cart->total()); ?></td>
+                <td colspan="3" style="text-align: center; font-size: 64px;"><?php echo matauang($this->cart->total()); ?></td>
+                <td><a href="<?php echo site_url('Balance_c/checkout/').$this->cart->total();?>" class="hapus"><i class="fas fa-shopping-cart"></i> Checkout</a></td>
+                
             </tr>
         </tbody>
 

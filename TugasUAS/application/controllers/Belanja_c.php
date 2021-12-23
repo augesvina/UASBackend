@@ -52,11 +52,16 @@ class Belanja_c extends CI_Controller {
         print_r($data);
     
         $this->cart->update($data);
-        // redirect(site_url('Belanja_c/index'));
+        redirect(site_url('Belanja_c/index'));
     }
 
     public function delete($rowid = NULL){
         $this->cart->remove($rowid);
+        redirect(site_url('Belanja_c/index'));
+    }
+
+    public function destroyCart(){
+        $this->cart->destroy();
         redirect(site_url('Belanja_c/index'));
     }
     
