@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    
+    background-image: url(img/pantai.jpg);
+    
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    
+}
+h4 {
+    font-size: 32px;
+}
+p {
+    font-size: medium;
+}
+.overlay {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    
+    
+}
+/* tampilan kembali ke list agar di pojok an */
+header {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: 20px;
+    color: white;
+
+    
+}
+header > a {
+    text-decoration: none;
+    background-color: #FF5151;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+header > a:hover {
+    background-color: grey;
+    transition: all 0.2s ease 0s;
+}
+
+/* Box pembungkus login */
+.box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    
+
+}
+/* Mengatur box inside */
+.box-inside {
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 20px;
+    width: 40vw;
+    height: 80vh;
+}
+/* Mengatur header pada inside-box */
+.box-inside .header {
+    box-sizing: border-box;
+    background-image: url(img/pantai.jpg);
+    background-size: cover;
+    height: 24vh;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 20px 20px 0 0;
+    
+}
+/* mengatur h4 */
+.box-inside .header > h4, p {
+    padding-left: 20px;
+    color: white;
+}
+
+/* Mengatur form */
+form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 20px 20px;
+    padding: 20px 5px;
+    justify-content: space-around;
+    
+}
+
+form .input-area {
+    display: flex;
+    flex-direction: column;
+
+}
+.input-area > input  {
+    border: none;
+    background-color: #5662FA;
+    padding: 10px 10px;
+    width: inherit;
+    height: 30px;
+    margin: 5px;
+    border-radius: 3vh;
+    font-size: 20px;
+    text-align: center;
+    
+
+}
+.input-area > input:hover, .input-area > input:focus {
+    background-color: rgb(106, 129, 129);
+    padding: 20px 20px;
+    color: white;
+    transition: all 0.5s ease 0s;
+    cursor: text;
+    border-color: lightblue;
+    box-shadow:0 0 10px #9ecaed;
+}
+/* placeholder */
+input::placeholder {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+/* Submit button */
+.submit {
+    align-self: center;
+    border: none;
+    height: 2rem;
+    width: 8rem;
+    background-color: #FF5151;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+
+}
+.submit:hover{
+    height: 4rem;
+    width: 10rem;
+    background-color: #e72323;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+
+
+

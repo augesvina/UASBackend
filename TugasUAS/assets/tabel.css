@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+table {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f5abab;
+    border: 1px solid #dddddd;
+
+}
+
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    
+}
+a {
+    text-decoration: none;
+   
+    
+
+}
+
+/* Bagian Tombol add,  hapus dan update */
+.add {
+    margin: 20px 0 20px 5px;
+}
+
+.add > a {
+    background-color: blue;
+    padding: 9px;
+    border-radius: 10px;
+    width: 120px;
+    height: 25px;
+    
+    color: white;
+
+}
+.add > a:hover {
+    background-color: lightblue;
+    transition: all 0.2s ease-in 0s;
+}
+.hapus {
+    
+    color: white;
+    background-color: red;
+    padding: 9px;
+    border-radius: 1vh;
+}
+
+.update {
+    
+    
+    color: white;
+    background-color: blue;
+    padding: 9px;
+    border-radius: 1vh;
+    
+}
+.update:hover , .hapus:hover {
+    background-color: grey;
+    transition: all 0.4s ease-in-out 0.4;
+}
+
+/* Alert */
+.alert-success {
+    background-color: #94B3FD;
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    padding: 30px;
+}
+
+
+/* Cart
+form ul li .cart {
+    background-color: #EADEDE;
+}
+form ul li .cart:hover {
+    background-color: grey;
+    transition: all 0.4s ease-in-out 0.4;
+} */
