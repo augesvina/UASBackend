@@ -25,7 +25,7 @@
         <!-- 6 -->
         <a href="<?php echo site_url('User_c');?>">Ubah User</a>
         <!-- 7 -->
-        <a href="<?php echo site_url('Cetak_c');?>">Cetak Laporan</a>
+      
         <!-- 8 Login dan Register-->
         <!-- 9  -->
         <a href="<?php echo site_url('RiwayatPenjualan_c');?>">CRUD Riwayat penjualan</a>

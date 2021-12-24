@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grafik</title>
+    <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/all.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/tabel.css'); ?>">
 </head>
 
 <body>
+<a href="<?php echo site_url('Bukuproduk_c'); ?>">Kembali ke Dashboard</a>
     <?php
     
 

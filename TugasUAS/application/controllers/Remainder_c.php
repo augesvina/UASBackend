@@ -19,7 +19,7 @@ class Remainder_c extends CI_Controller{
         
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('remainder/add');
-            print_r("Gagal");
+            
         } else {
 
             $this->session->set_flashdata('success', 'Berhasil ditambahkan');
