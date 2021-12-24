@@ -16,7 +16,7 @@
     <div class="add">
         <a href="<?php echo site_url('Bukuproduk_c'); ?>">Kembali ke Dashboard</a>
 
-        <a href="<?php echo site_url('Informasi_c/input'); ?>">Informasi Buku</a>
+        <a href="<?php echo site_url('Informasi_c/input'); ?>">Input Pemesanan</a>
     </div>
 
 
